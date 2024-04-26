@@ -1,0 +1,25 @@
+body {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #006EB6;
+}
+
+#ordered_list_start {
+    font-style: italic;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+    height: 150px;
+}
