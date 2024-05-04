@@ -28,5 +28,3 @@ themeSelect.addEventListener('change', applyTheme);
 
 // Apply initial theme based on user preference (if any)
 applyTheme();
-
-
