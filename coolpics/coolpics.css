@@ -121,10 +121,6 @@ p {
         display: none;
     }
 
-    .hide {
-        display: block;
-    }
-
     nav a {
         padding-left: 40px;
         padding-right: 40px;
@@ -134,10 +130,6 @@ p {
 @media screen and (min-width: 1500px) {
     .menu-button {
         display: none;
-    }
-
-    .hide {
-        display: block;
     }
 
     nav a {
