@@ -128,10 +128,6 @@ p {
 }
 
 @media screen and (min-width: 1500px) {
-    .menu-button {
-        display: none;
-    }
-
     nav a {
         padding-left: 90px;
         padding-right: 90px;
