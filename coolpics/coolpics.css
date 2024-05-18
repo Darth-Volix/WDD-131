@@ -42,6 +42,7 @@ body {
     width: auto;
     margin: 0 auto;
     border: none;
+    box-shadow: none;
 }
 
 
@@ -129,6 +130,14 @@ p {
 }
 
 @media screen and (min-width: 700px) {
+    .viewer-img {
+        max-height: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: 0 auto;
+        border: none;
+    }
+
     .gallery {
         max-width: 700px;
         grid-template-columns: 1fr 1fr;
@@ -145,8 +154,8 @@ p {
     .viewer {
         align-self: center;
         margin: 0 auto;
-        max-width: 1300px;
-        height: 900px;
+        max-width: 1100px;
+        height: 800px;
     }
 
     .close-viewer {
@@ -156,9 +165,10 @@ p {
 
     .viewer-img {
         max-height: 100%;
-        max-width: 1000px;
+        max-width: 800px;
         height: auto;
         margin: 0 auto;
+        margin-top: 30px;
         border: none;
     }
 
