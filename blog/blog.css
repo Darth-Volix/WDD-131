@@ -33,23 +33,36 @@ h1 {
     margin-bottom: 50px;
 }
 
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
 .main-nav {
     text-align: center;
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 90px);
     justify-content: end;
     border-top: 2px solid var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-right: 100px;
+    padding-right: 75px;
 }
 
-a {
+.main-nav li a {
     font-size: 20px;
     text-decoration: none;
     color: var(--secondary-color);
+}
+
+.article-details {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 20px);
+    row-gap: 15px;
 }
 
 .title {
@@ -59,4 +72,16 @@ a {
 
 .date {
     font-size: 18px;
+}
+
+.article {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+.filter-form {
+    grid-column: 3 / 4;
+    display: grid;
 }
