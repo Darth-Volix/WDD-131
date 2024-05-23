@@ -1,11 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
+:root {
+    --primary-color: #473144;
+    --secondary-color: #AF1B3F;
+    --accent-color: #EFC69B;
+    --headings-font: 'Lora', Impact, serif;
+    --body-font: Helvetica, Arial, sans-serif;
+}
+
 body {
-    margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    color: #473144;
+    max-width: 1600px;
+    margin: 0 auto;
+    font-family: var(--body-font);
+    color: var(--primary-color);
+    font-size: 16px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 
 h1, h2 {
-    font-family: 'Lora', Impact, serif;
+    font-family: var(--headings-font);
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.main-nav {
+    text-align: center;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    justify-content: end;
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 100px;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.title {
+    font-size: 24px;
+    color: var(--secondary-color);
+}
+
+.date {
+    font-size: 18px;
 }
