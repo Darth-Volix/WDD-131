@@ -155,4 +155,5 @@ body{
     grid-column: 3 / 4;
     grid-row: 4 / 5;
     z-index: 1;
+    height: 40px;
 }
