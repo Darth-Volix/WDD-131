@@ -1,4 +1,4 @@
-import { participantTemplate, successTemplate } from './templates.js';
+import { participantTemplate, successTemplate } from './Templates.js';
 
 let participantCount = 1;
 
@@ -16,7 +16,7 @@ function totalFees() {
 
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    
+
     const total = totalFees();
     const name = document.getElementById('adult_name').value;
     const info = {
