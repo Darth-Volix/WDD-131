@@ -16,13 +16,15 @@ function totalFees() {
 
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
+    
     const total = totalFees();
     const name = document.getElementById('adult_name').value;
     const info = {
-        name: name,
-        count: participantCount,
-        fees: total
-    };  
+      name: name,
+      count: participantCount,
+      fees: total
+    };
+  
     document.getElementById('registrationForm').style.display = 'none';
     const summary = document.getElementById('summary');
     summary.innerHTML = successTemplate(info);
