@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap");
+:root {
+--primary-color: #1B98E0;
+--secondary-color: #59c3c3;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica, sans-serif;
+--secondary-font: "Amatic SC";
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--text-dark);
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.logo h1 {
+    font-family: var(--secondary-font);
+    font-size: 3.2rem;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#search-bar {
+    width: 300px;
+}
+
+#search-button {
+    width: 45px;
+    height: 30px;
+    border: 1px solid var(--text-dark);
+    padding: 5px;
+}
