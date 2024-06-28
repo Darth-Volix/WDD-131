@@ -56,8 +56,8 @@ function filter(query) {
     const filtered = recipes.filter(recipe => {
         return recipe.name.toLowerCase().includes(query) ||
                recipe.description.toLowerCase().includes(query) ||
-               recipe.tags.find(tag => tag.toLowerCase().includes(query)) ||
-               recipe.ingredients.find(ingredient => ingredient.toLowerCase().includes(query));
+               (recipe.tags && recipe.tags.find(tag => tag.toLowerCase().includes(query))) ||
+               (recipe.recipeIngredient && recipe.recipeIngredient.find(recipeIngredient => recipeIngredient.toLowerCase().includes(query)));
     });
 
     const sorted = filtered.sort((a, b) => a.name.localeCompare(b.name));
@@ -67,7 +67,7 @@ function filter(query) {
 // Function to handle search
 function searchHandler(e) {
     e.preventDefault();
-    const query = document.getElementById('search-input').value.toLowerCase();
+    const query = document.getElementById('search-bar').value.toLowerCase();
     const filteredRecipes = filter(query);
     renderRecipes(filteredRecipes);
 }
