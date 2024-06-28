@@ -73,7 +73,7 @@ header {
 
 #search-bar {
     width: 300px;
-    color: var(--text-light);
+    color: black;
     font-size: 20px;
     border: 1px solid var(--text-dark);
     border-top-left-radius: 5px;
