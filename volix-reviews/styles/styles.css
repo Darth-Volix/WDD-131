@@ -68,6 +68,7 @@ header{
 
 .logo{
     width: 80px;
+    height: auto;
 }
 
 #logo_link{
@@ -194,14 +195,6 @@ nav a:hover{
     border: solid black;
 }
 
-#goal-image{
-    grid-column: 3/4;
-    grid-row: 3/5;
-    margin-top: 75px;
-    box-shadow: 5px 5px 10px #020E1F;
-    border: solid black;
-}
-
 footer{
     background-color: #37393A;
     color: white;
@@ -230,6 +223,11 @@ footer p a:hover{
 
 .social{
     padding-top: 15px;
+}
+
+.social-image{
+    width: 50px;
+    height: auto;
 }
 
 @media screen and (min-width: 650px){
