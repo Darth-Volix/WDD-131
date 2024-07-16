@@ -233,6 +233,7 @@ footer p a:hover{
 @media screen and (min-width: 650px){
     #family-image{
         height: 600px;
+        width: auto;
     }
 
     #about-me-paragraph{
@@ -252,6 +253,7 @@ footer p a:hover{
 
     #family-image{
         height: 700px;
+        width: auto;
     }
 
     #about-me-paragraph{
@@ -286,6 +288,7 @@ footer p a:hover{
 
     #family-image{
         height: 700px;
+        width: auto;
     }
 
     #about-me-paragraph{
