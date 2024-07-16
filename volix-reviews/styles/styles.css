@@ -110,6 +110,7 @@ nav a:hover{
     width: 100%;
     height: auto;
     border-bottom: solid black;
+    box-shadow: 5px 5px 10px var(--accent1-color);
 }
 
 .hero-title{
@@ -121,6 +122,7 @@ nav a:hover{
     background-color: var(--paragraph-background-color);
     padding: 10px;
     font-family: var(--heading-font);
+    font-size: 1.2em;
     box-shadow: 5px 5px 10px var(--accent1-color);
     border: solid black;
 }
@@ -129,6 +131,13 @@ nav a:hover{
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+#about-me-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #family-image{
@@ -221,4 +230,71 @@ footer p a:hover{
 
 .social{
     padding-top: 15px;
+}
+
+@media screen and (min-width: 650px){
+    #family-image{
+        height: 600px;
+    }
+
+    #about-me-paragraph{
+        max-width: 600px;
+    }
+
+    #goal-paragraph{
+        max-width: 600px;
+    }
+    
+}
+
+@media screen and (min-width: 960px){
+    .hero-title{
+        font-size: 1.5em;
+    }
+
+    #family-image{
+        height: 700px;
+    }
+
+    #about-me-paragraph{
+        max-width: 800px;
+    }
+
+    #goal-paragraph{
+        max-width: 800px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    #content{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .displayed-content{
+        max-width: 1500px;
+    }
+
+    .hero-image{
+        border: solid black;
+    }
+
+    #about-me-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #family-image{
+        height: 700px;
+    }
+
+    #about-me-paragraph{
+        max-width: 500px;
+    }
+
+    #goal-paragraph{
+        max-width: 1100px;
+    }
 }
