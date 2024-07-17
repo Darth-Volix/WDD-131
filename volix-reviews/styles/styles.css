@@ -158,6 +158,7 @@ nav a:hover{
 #home-grid{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -222,6 +223,47 @@ nav a:hover{
     border: solid black;
 }
 
+.review{
+    margin: 25px;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.review .tags {
+    max-width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px;
+    margin-top: 2px;
+    font-size: medium;
+}
+
+.review .review-title {
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.review .review-rating {
+    margin-bottom: 15px;
+}
+
+.review .review-image {
+    width: 100%;
+    height: auto;
+    border: solid black;
+}
+
+.review .review-description {
+    display: none;
+}
+
 footer{
     background-color: var(--accent1-color);
     color: white;
@@ -259,6 +301,32 @@ footer a{
 
     #goal-paragraph{
         max-width: 600px;
+    }
+
+    #search-bar {
+        width: 600px;
+    }
+
+    .review {
+        display: flex;
+        flex-direction: row;
+        width: 600px;
+    }
+
+    .review .review-image {
+        width: 300px;
+        height: 300px;
+        margin-right: 25px;
+    }
+
+    .review .review-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .review .review-description {
+        margin-top: 0px;
+        display: block;
     }
     
 }
