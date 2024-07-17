@@ -1,9 +1,5 @@
 import reviews from './reviews.mjs';
 
-function tagsTemplate(tags) {
-    return tags.map(tag => `<li>${tag}</li>`).join('');
-}
-
 function ratingTemplate(rating) {
     let html = `<span
     class="rating"
@@ -26,8 +22,9 @@ function reviewTemplate(review) {
         <section class="review">
             <img class="review-image" src="${review.image}" alt="${review.date} Image">
             <section class="review-info">
-                <h2 class="tags">${review.tags.join(', ')}</h2>
-                <h3 class="review-title">${review.date}</h3>
+                <h2 class="review-title">${review.title}</h3>
+                <h3 class="tags">${review.tags.join(', ')}</h2>
+                <p class="review-date">${review.date}</p>
                 ${ratingTemplate(review.rating)}
                 <p class="review-description">${review.review}</p>
             </section>
@@ -57,32 +54,32 @@ function displayRandomReviews() {
     });
 }
 
-// Function to filter and sort reviews 
-function filter(query) {
-    const filtered = reviews.filter(review => {
-        return review.date.toLowerCase().includes(query) ||
-               review.review.toLowerCase().includes(query) ||
-               (review.tags && review.tags.find(tag => tag.toLowerCase().includes(query)));
-    });
-    return filtered;
-}
-
-// Function to handle search
-function searchHandler(e) {
-    e.preventDefault();
-    const query = document.getElementById('search-bar').value.toLowerCase();
-    const filteredReviews = filter(query);
-    renderReviews(filteredReviews);
-}
-
-// Function to render reviews
-function renderReviews(reviews) {
+function searchReviews(query) {
     const mainContent = document.getElementById('home-grid');
-    mainContent.innerHTML = reviews.map(review => reviewTemplate(review)).join('');
+    mainContent.innerHTML = '';
+
+    // Filter reviews by title or tags
+    const filteredReviews = reviews.filter(review => {
+        const lowerCaseQuery = query.toLowerCase();
+        return review.title.toLowerCase().includes(lowerCaseQuery) || 
+               review.tags.some(tag => tag.toLowerCase().includes(lowerCaseQuery));
+    });
+
+    if (filteredReviews.length > 0) {
+        filteredReviews.forEach(review => {
+            mainContent.innerHTML += reviewTemplate(review);
+        });
+    } else {
+        mainContent.innerHTML = '<p>No reviews found matching your search criteria.</p>';
+    }
 }
 
-// Event listener for search button click
-document.getElementById('search-button').addEventListener('click', searchHandler);
+// Event listener for search form
+document.getElementById('search-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const query = document.getElementById('search-bar').value;
+    searchReviews(query);
+});
 
 // Run this function when the page loads
 document.addEventListener('DOMContentLoaded', displayRandomReviews);
