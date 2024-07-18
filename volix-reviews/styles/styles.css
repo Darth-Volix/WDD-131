@@ -219,21 +219,24 @@ nav a:hover{
     margin-bottom: 25px;
     font-family: var(--paragraph-font);
     line-height: 1.4;
-    box-shadow: 5px 5px 10px #020E1F;
+    box-shadow: 5px 5px 10px var(--accent1-color);
     border: solid black;
 }
 
 .review{
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
     margin: 25px;
     padding: 25px;
     border: 1px solid black;
     border-radius: 5px;
     width: 400px;
+    box-shadow: 5px 5px 10px var(--accent1-color);
 }
 
 .review .tags {
     max-width: fit-content;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 5px;
     padding: 7px;
     margin-top: 2px;
@@ -244,7 +247,6 @@ nav a:hover{
     font-family: var(--secondary-font);
     font-weight: 500;
     font-size: 1.5rem;
-    color: var(--primary-color);
     margin-top: 0;
     margin-bottom: 5px;
     padding: 0;
@@ -258,6 +260,7 @@ nav a:hover{
     width: 100%;
     height: auto;
     border: solid black;
+    box-shadow: 5px 5px 10px var(--accent1-color);
 }
 
 .review .review-description {
