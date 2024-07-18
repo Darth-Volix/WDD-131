@@ -185,11 +185,10 @@ nav a:hover{
     padding: 15px;
     border: solid black;
     box-shadow: 5px 5px 10px var(--accent1-color);
-
 }
 
 #goal-paragraph{
-    align-self: center;
+    margin: 0 auto;
     text-align: center;
     background-color: var(--paragraph-background-color);
     color: var(--paragraph-color-on-color);
@@ -208,7 +207,6 @@ nav a:hover{
     align-items: center;
     justify-content: center;
     margin-top: 25px;
-    margin-bottom: 25px
 }
 
 #search-bar {
@@ -233,7 +231,7 @@ nav a:hover{
 .review{
     background-color: var(--paragraph-background-color);
     color: var(--paragraph-color-on-color);
-    margin-bottom: 50px;
+    margin: 25px;
     padding: 25px;
     border: 1px solid black;
     border-radius: 5px;
