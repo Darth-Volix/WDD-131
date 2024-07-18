@@ -20,14 +20,16 @@ function ratingTemplate(rating) {
 function reviewTemplate(review) {
     return `
         <section class="review">
-            <img class="review-image" src="${review.image}" alt="${review.date} Image">
-            <section class="review-info">
-                <h2 class="review-title">${review.title}</h3>
-                <h3 class="tags">${review.tags.join(', ')}</h2>
-                <p class="review-date">${review.date}</p>
-                ${ratingTemplate(review.rating)}
-                <p class="review-description">${review.review}</p>
-            </section>
+            <div class="review-image-and-info">
+                <img class="review-image" src="${review.image}" alt="${review.imagealt}">
+                <section class="review-info">
+                    <h2 class="review-title">${review.title}</h3>
+                    <h3 class="tags">${review.tags.join(', ')}</h2>
+                    <p class="review-date">${review.date}</p>
+                    ${ratingTemplate(review.rating)}
+                </section>
+            </div>
+            <p class="review-description">${review.review}</p>
         </section>
     `;
 }
@@ -57,6 +59,12 @@ function displayRandomReviews() {
 function searchReviews(query) {
     const mainContent = document.getElementById('home-grid');
     mainContent.innerHTML = '';
+
+    // If the search bar is empty, display a message
+    if (!query.trim()) {
+        mainContent.innerHTML = '<p>No reviews found matching your search criteria.</p>';
+        return;
+    }
 
     // Filter reviews by title or tags
     const filteredReviews = reviews.filter(review => {
